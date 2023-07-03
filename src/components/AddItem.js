@@ -12,7 +12,7 @@ function AddItem() {
   const addNewItem = item => {
     const id = items?.length ? items[items.length - 1].id + 1 : 1;
     const defItem = { id, checked: false, item };
-    const listItems = [...items, defItem];
+    const listItems = items?.length ? [...items, defItem] : [defItem];
     setAndSaveItems(listItems);
   };
 
