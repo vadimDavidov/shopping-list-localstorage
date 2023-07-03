@@ -10,7 +10,7 @@ function Footer() {
       <span>Copyright &copy; {today.getFullYear()}</span>
       <span>🛍</span>
       <span>
-        {items.length} {items.length === 1 ? 'item' : 'items'}
+        {items?.length} {items?.length === 1 ? 'item' : 'items'}
       </span>
     </footer>
   );
