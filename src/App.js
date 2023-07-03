@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import InputsBlock from './components/InputsBlock';
+import Content from './components/Content';
+import Footer from './components/Footer';
+import { DataProvider } from './context/DataContext';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DataProvider>
+        <Header title="Shopping List" />
+        <InputsBlock />
+        <Content />
+        <Footer />
+      </DataProvider>
     </div>
   );
 }
