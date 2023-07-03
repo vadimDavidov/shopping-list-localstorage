@@ -10,7 +10,7 @@ export const DataProvider = ({ children }) => {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    const filteredItems = items.filter(item =>
+    const filteredItems = items?.filter(item =>
       item.item.toLowerCase().includes(search.toLowerCase())
     );
     setSearchResults(filteredItems.sort((a, b) => a.item < b.item && -1));
