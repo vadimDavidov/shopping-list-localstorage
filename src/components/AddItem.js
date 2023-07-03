@@ -10,7 +10,7 @@ function AddItem() {
   const capitalizedNewItem = newItem.charAt(0).toUpperCase() + newItem.slice(1);
 
   const addNewItem = item => {
-    const id = items.length ? items[items.length - 1].id + 1 : 1;
+    const id = items?.length ? items[items.length - 1].id + 1 : 1;
     const defItem = { id, checked: false, item };
     const listItems = [...items, defItem];
     setAndSaveItems(listItems);

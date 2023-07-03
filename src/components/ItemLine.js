@@ -6,14 +6,14 @@ function ItemLine({ item }) {
   const { items, setAndSaveItems } = useContext(DataContext);
 
   const handleCheck = id => {
-    const listItems = items.map(item =>
+    const listItems = items?.map(item =>
       item.id === id ? { ...item, checked: !item.checked } : item
     );
     setAndSaveItems(listItems);
   };
 
   const handleDelete = id => {
-    const itemsList = items.filter(item => item.id !== id);
+    const itemsList = items?.filter(item => item.id !== id);
     setAndSaveItems(itemsList);
   };
 

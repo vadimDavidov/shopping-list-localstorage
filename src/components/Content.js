@@ -7,7 +7,7 @@ function Content() {
   const { items, setAndSaveItems, searchResults } = useContext(DataContext);
 
   const handleDelete = () => {
-    const itemsList = items.filter(item => !item.checked);
+    const itemsList = items?.filter(item => !item.checked);
     setAndSaveItems(itemsList);
   };
 
