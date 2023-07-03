@@ -13,7 +13,7 @@ export const DataProvider = ({ children }) => {
     const filteredItems = items?.filter(item =>
       item.item.toLowerCase().includes(search.toLowerCase())
     );
-    setSearchResults(filteredItems.sort((a, b) => a.item < b.item && -1));
+    setSearchResults(filteredItems?.sort((a, b) => a.item < b.item && -1));
   }, [items, search]);
 
   const setAndSaveItems = newItems => {
